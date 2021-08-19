@@ -1,19 +1,26 @@
-/*
- * @Author: your name
- * @Date: 2021-08-19 11:08:43
- * @LastEditTime: 2021-08-19 13:22:27
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /react-konwledge/src/index.js
- */
+
 import React from 'react'
-import {
-    render
-} from 'react-dom'
+import { render } from 'react-dom'
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import App from './App'
+
+import { mainRouters } from "./routes";
 import './index.less'
 render(
-    <App />,
+    <Router>
+        <Switch>
+            <Route path='/admin' render={(routerProps) => {
+                return <App  {...routerProps} />
+            }} />
+            {
+                mainRouters.map(route => {
+                    return <Route key={route.pathname} path={route.pathname} component={route.component} />
+                })
+            }
+            <Redirect to='/admin' from='/' exact />
+            <Redirect to='/404' />
+        </Switch>
+    </Router>,
     document.querySelector('#root')
 )
