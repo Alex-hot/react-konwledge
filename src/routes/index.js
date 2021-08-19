@@ -26,15 +26,19 @@ export const mainRouters = [
 export const configRouters = [
     {
         pathname: '/admin/dashboard',
-        component: DashBoard
+        component: DashBoard,
+        title: "仪表盘"
     }, {
         pathname: '/admin/react-js',
-        component: ReactJS
+        component: ReactJS,
+        title: "reactJS"
     }, {
         pathname: '/admin/react-router',
-        component: ReactRouter
+        component: ReactRouter,
+        title: "react-routere"
     }, {
         pathname: '/admin/react-state',
-        component: ReactState
+        component: ReactState,
+        title: "react状态管理"
     }
 ]
