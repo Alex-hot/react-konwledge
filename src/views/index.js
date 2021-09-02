@@ -22,6 +22,10 @@ const ReactJS = Loadable({
     loader: () => import('./ReactJS'),
     loading: Loading,
 })
+const HelloWorld = Loadable({
+    loader: () => import('./ReactJS/HelloWorld'),
+    loading: Loading,
+})
 const ReactRouter = Loadable({
     loader: () => import('./ReactRouter'),
     loading: Loading,
@@ -37,7 +41,7 @@ export {
     NotFound,
     ReactJS,
     ReactRouter,
-    ReactState
-
+    ReactState,
+    HelloWorld
 }
 

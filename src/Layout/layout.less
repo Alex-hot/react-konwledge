@@ -1,11 +1,36 @@
-.diy-header{
-    background: #fff;
-    padding: 0 16px;
-    border-bottom: 1px solid #dedede;
-    .diy-logo{
-        height: 48px;
-        img{
-            max-height: 100%;
-        }
+.page {
+  height: 100vh;
+  .logo {
+    background: #001529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    img {
+      width: 36px;
+      height: 36px;
     }
+    span {
+      color: #fff;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  }
+  .container-wrapper {
+    display: flex;
+    flex-direction: column;
+    .diy-header {
+      background: #fff;
+      flex-shrink: 0;
+    }
+    .content-wrapper {
+      flex: 1;
+      border: 1px solid green;
+      margin: 24px;
+      background: #fff;
+    }
+  }
+  .menuContainer {
+    height: calc(100vh - 64px);
+  }
 }
