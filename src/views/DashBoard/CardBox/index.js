@@ -179,10 +179,10 @@ class CardBox extends Component {
             </div>
           </div>
 
-          <div className="foot-info">
+          <div className="foot-info foot-info-4">
             <span className="label">周同比</span>
             <span className="cent-info">
-              {(Math.abs(this.state.resultInfo.weekCent) * 100).toFixed(2)}%
+              {(Math.abs(this.state.resultInfo.weekCent) * 100).toFixed(0)}%
               {this.state.resultInfo.weekCent === 0 ? (
                 "-"
               ) : this.state.resultInfo.weekCent > 0 ? (
@@ -193,7 +193,7 @@ class CardBox extends Component {
             </span>
             <span className="label">日同比</span>
             <span className="cent-info">
-              {(Math.abs(this.state.resultInfo.dailyCent) * 100).toFixed(2)}%
+              {(Math.abs(this.state.resultInfo.dailyCent) * 100).toFixed(0)}%
               {this.state.resultInfo.dailyCent === 0 ? (
                 "-"
               ) : this.state.resultInfo.dailyCent > 0 ? (
